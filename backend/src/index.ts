@@ -47,13 +47,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // ─── Health Check ──────────────────────────────────────────────────────────────
-app.get('/api/health', (_req: Request, res: Response) => {
+app.get(['/api/health', '/health'], (_req: Request, res: Response) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
 // ─── Routes ───────────────────────────────────────────────────────────────────
-app.use('/api/auth', authRoutes);
-app.use('/api/projects', projectRoutes);
+app.use(['/api/auth', '/auth'], authRoutes);
+app.use(['/api/projects', '/projects'], projectRoutes);
 
 // ─── 404 Handler ──────────────────────────────────────────────────────────────
 app.use((_req: Request, res: Response) => {
