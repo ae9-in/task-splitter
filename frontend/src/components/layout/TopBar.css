@@ -1,0 +1,117 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--topbar-height);
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  z-index: 200;
+  box-shadow: var(--shadow-sm);
+}
+
+.topbar-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding: 0 var(--page-padding);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+.topbar-logo:hover { opacity: 0.85; text-decoration: none; }
+
+.topbar-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--teal-dark);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.topbar-logo-text {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ─── Save Indicator ─────────────────────────────────────────────────────────── */
+.save-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  transition: all var(--transition);
+}
+
+.save-saving {
+  color: var(--teal-dark);
+  background: rgba(0,121,121,0.08);
+}
+.save-saved {
+  color: var(--success);
+  background: var(--success-light);
+}
+.save-error {
+  color: var(--danger);
+  background: var(--danger-light);
+}
+
+@keyframes saveSpin {
+  to { transform: rotate(360deg); }
+}
+
+.save-spin {
+  animation: saveSpin 0.8s linear infinite;
+}
+
+/* ─── Logout ─────────────────────────────────────────────────────────────────── */
+.topbar-logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+.topbar-logout:hover {
+  background: var(--danger-light);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+.topbar-logout:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 560px) {
+  .topbar-logout-label { display: none; }
+}

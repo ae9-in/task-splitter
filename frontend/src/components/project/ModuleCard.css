@@ -1,0 +1,126 @@
+.module-card {
+  border-left: 4px solid var(--teal-dark);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition-md);
+}
+
+.module-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.module-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px 20px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  cursor: default;
+}
+
+.module-collapse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: var(--border-light);
+  border-radius: 6px;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.module-collapse-btn:hover {
+  background: var(--border);
+  color: var(--text-primary);
+}
+
+.module-title-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.module-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.module-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.module-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-light);
+  transition: background var(--transition), color var(--transition);
+}
+
+.module-btn-delete:hover {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.module-body {
+  padding: 14px 20px;
+  background: var(--cream-light);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.module-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.module-empty {
+  padding: 8px 0;
+  text-align: center;
+}
+
+.add-placeholder-module {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  width: 100%;
+  justify-content: center;
+}
+
+.add-placeholder-module:hover {
+  border-color: var(--teal-mid);
+  color: var(--teal-dark);
+  background: rgba(0,121,121,0.04);
+}

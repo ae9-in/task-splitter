@@ -1,0 +1,227 @@
+.detail-header {
+  margin-bottom: 24px;
+}
+
+.detail-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-title-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.detail-stats {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* ─── Status Selector ────────────────────────────────────────────────────────── */
+.status-selector {
+  position: relative;
+}
+
+.status-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition);
+}
+
+.status-trigger:hover {
+  background: var(--border-light);
+}
+
+.status-chevron {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.status-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+.status-option {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--transition);
+}
+
+.status-option:hover {
+  background: var(--cream-light);
+}
+
+.status-option-active {
+  background: var(--border-light);
+}
+
+/* ─── Filters ────────────────────────────────────────────────────────────────── */
+.detail-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.detail-search-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 160px;
+  max-width: 280px;
+}
+
+.detail-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.detail-search-input {
+  width: 100%;
+  padding: 7px 10px 7px 30px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  outline: none;
+  background: var(--cream-light);
+  transition: border-color var(--transition);
+}
+
+.detail-search-input:focus {
+  border-color: var(--teal-dark);
+  background: var(--white);
+}
+
+.detail-filter-group {
+  display: flex;
+  gap: 8px;
+}
+
+.detail-filter-select {
+  padding: 6px 10px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-muted);
+  background: var(--cream-light);
+  cursor: pointer;
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+.detail-filter-select:focus {
+  border-color: var(--teal-dark);
+  color: var(--text-primary);
+}
+
+/* ─── Modules ────────────────────────────────────────────────────────────────── */
+.detail-modules {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detail-empty {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-xl);
+}
+
+.add-module-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-xl);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  width: 100%;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.add-module-btn:hover {
+  border-color: var(--teal-mid);
+  color: var(--teal-dark);
+  background: rgba(0,121,121,0.03);
+}
+
+/* ─── Loading skeleton ───────────────────────────────────────────────────────── */
+.detail-skeleton {
+  padding: 0;
+}
+
+.detail-error {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,44 @@
+.inline-edit-display {
+  cursor: text;
+  display: inline-block;
+  border-bottom: 1.5px dashed transparent;
+  transition: border-color var(--transition), background var(--transition);
+  border-radius: 3px;
+  padding: 1px 2px;
+  min-width: 40px;
+  min-height: 1em;
+}
+
+.inline-edit-display:hover {
+  border-bottom-color: var(--teal-mid);
+  background: rgba(0,121,121,0.04);
+}
+
+.inline-edit-empty {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.inline-edit-input {
+  border: 1.5px solid var(--teal-dark);
+  border-radius: var(--radius-sm);
+  padding: 3px 7px;
+  outline: none;
+  background: var(--white);
+  color: var(--text-primary);
+  font-family: inherit;
+  width: 100%;
+  box-shadow: 0 0 0 3px rgba(0,121,121,0.1);
+  transition: box-shadow var(--transition);
+}
+
+.inline-edit-input:focus {
+  box-shadow: 0 0 0 3px rgba(0,121,121,0.18);
+}
+
+.inline-edit-textarea {
+  resize: vertical;
+  min-height: 64px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

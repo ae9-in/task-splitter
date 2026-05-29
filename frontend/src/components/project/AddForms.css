@@ -1,0 +1,98 @@
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--cream-light);
+  border: 1.5px solid var(--teal-mid);
+  border-radius: var(--radius-md);
+  animation: fadeIn 0.2s ease forwards;
+}
+
+.add-form-feature {
+  background: var(--white);
+  border-color: var(--border);
+  border-style: dashed;
+}
+
+.add-form-module {
+  background: var(--white);
+  border: 2px dashed var(--teal-dark);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+}
+
+.add-form-input {
+  padding: 8px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  background: var(--white);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.add-form-input:focus {
+  border-color: var(--teal-dark);
+  box-shadow: 0 0 0 3px rgba(0,121,121,0.1);
+}
+
+.add-form-textarea {
+  padding: 8px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-muted);
+  background: var(--white);
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--transition);
+}
+
+.add-form-textarea:focus {
+  border-color: var(--teal-dark);
+}
+
+.add-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.add-form-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.add-form-btn-confirm {
+  background: var(--teal-dark);
+  color: var(--white);
+}
+.add-form-btn-confirm:hover:not(:disabled) {
+  background: #005f5f;
+}
+.add-form-btn-confirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-form-btn-cancel {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+.add-form-btn-cancel:hover {
+  background: var(--border-light);
+  color: var(--text-primary);
+}
